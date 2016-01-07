@@ -1,0 +1,16 @@
+<div id="wrapper">
+    <?php
+    $this->form->setAction($this->url());
+    $this->sort->setAction($this->url());
+    echo $this->form;
+
+    ?>
+
+    <?php echo $this->sort; ?>
+    <div class="messages">
+        <?php
+        echo $this->partialLoop('partials/messages.phtml', $this->messages);
+        ?>
+    </div>
+    <?php echo $this->paginationControl($this->messages, 'Sliding', 'partials/pagination_control.phtml'); ?>
+</div>

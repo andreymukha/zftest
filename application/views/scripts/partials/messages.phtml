@@ -1,0 +1,6 @@
+<div class="message">
+    <h3>№<?php echo $this->escape($this->message_id);?> <?php echo $this->escape($this->title);?></h3>
+    <p class="info"><strong>Опубликовано: <a href="mailto:<?php echo $this->escape($this->email);?>"><?php echo $this->escape($this->name);?></a></strong> | <strong>Дата: </strong><?php echo date('d-m-Y H:i:s', $this->escape($this->created_at));?></p>
+    <p><?php echo nl2br($this->text);?></p>
+</div>
+<hr>
